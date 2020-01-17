@@ -8,7 +8,7 @@ def catch_all(path):
 	q=request.args.get('q')
 	headers={'Referer': 'http://vidstreaming.io', 'TE': 'Trailers', 'Alt-Used': 'vidstreaming.io:443', 'X-Requested-With': 'XMLHttpRequest'}
 	r=requests.get('http://vidstreaming.io/ajax-search.html?keyword='+q,headers=headers).json()
-	return jsonify(modified)	
+	return jsonify(r)	
 @app.route('/')
 def nulljson():
 	return q
