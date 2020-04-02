@@ -11,6 +11,6 @@ def nulljson():
 	return q
 @app.route('/asd')
 def findallepisode(name):
-	headers={'Referer': 'http://vidstreaming.io', 'TE': 'Trailers', 'Alt-Used': 'vidstreaming.io:443', 'X-Requested-With': 'XMLHttpRequest'}
+	headers={'Referer': 'http://vidstreaming.io', 'TE': 'Trailers', 'X-Requested-With': 'XMLHttpRequest'}
 	r=requests.get('http://vidstreaming.io/ajax-search.html?keyword='+name,headers=headers).json()
 	return r
