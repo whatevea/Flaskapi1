@@ -6,7 +6,7 @@ app= Flask(__name__)
 @app.route('/<path:path>')
 def catch_all(path):
 	q=request.args.get('q')
-	headers={'Referer': 'http://vidstreaming.io', 'TE': 'Trailers', 'Alt-Used': 'vidstreaming.io:443', 'X-Requested-With': 'XMLHttpRequest'}
+	headers={'Referer': 'http://vidstreaming.io', 'TE': 'Trailers','X-Requested-With': 'XMLHttpRequest'}
 	r=requests.get('http://vidstreaming.io/ajax-search.html?keyword='+q,headers=headers).json()
 	return jsonify(r)	
 @app.route('/')
