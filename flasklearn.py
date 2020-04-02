@@ -11,7 +11,7 @@ def catch_all(path):
 	return jsonify(r)	
 @app.route('/')
 def nulljson():
-	return q
+	return findallepisode(q)
 @app.route('/asd')
 def findallepisode(name):
 	headers={'Referer': 'http://vidstreaming.io', 'TE': 'Trailers', 'Alt-Used': 'vidstreaming.io:443', 'X-Requested-With': 'XMLHttpRequest'}
